@@ -1,15 +1,17 @@
+-- try :h vim.lsp.buf
+
 return {
 	{
-    	"williamboman/mason.nvim",
+		"williamboman/mason.nvim",
 		config = function()
 			require("mason").setup()
 		end
 	},
 	{
-		 "williamboman/mason-lspconfig.nvim",
-		config = function ()
+		"williamboman/mason-lspconfig.nvim",
+		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = {"lua_ls"}
+				ensure_installed = { "lua_ls" }
 			})
 		end
 	},
