@@ -52,6 +52,7 @@ return {
             install_extensions {
                 'fzf',
                 'ui-select',
+                'possession',
             }
 
             --  :help telescope.builtin

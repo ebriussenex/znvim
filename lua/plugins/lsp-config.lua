@@ -70,7 +70,6 @@ end
 -- list of mason servers
 local servers = {
     clangd = {},
-
     gopls = {},
     pyright = {},
     rust_analyzer = {},
