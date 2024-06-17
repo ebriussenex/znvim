@@ -1,0 +1,3 @@
+return {
+    { 'arturgoms/moonbow.nvim' },
+}

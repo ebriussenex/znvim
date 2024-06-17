@@ -16,3 +16,9 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 
 -- escape terminal
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
+
+-- toggleterm maps
+vim.keymap.set('n', '<leader>t-', '<cmd>:ToggleTerm direction=horizontal<CR>', { desc = 'Toggle term horizontal' })
+
+vim.keymap.set('n', '<leader>t_', '<cmd>:ToggleTerm direction=vertical<CR>', { desc = 'Toggle term vertical' })
+vim.keymap.set('n', '<leader>tf', '<cmd>:ToggleTerm direction=float<CR>', { desc = 'Toggle term floating' })
