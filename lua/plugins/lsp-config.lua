@@ -73,6 +73,7 @@ local servers = {
     gopls = {},
     pyright = {},
     rust_analyzer = {},
+    templ = {},
 }
 
 return {
@@ -90,11 +91,15 @@ return {
         config = function()
             local handlers = {
                 function(server_name)
+                    -- using rustacenvim, rust_analyzer should not be setup
+                    if server_name == 'rust_analyzer' then
+                        return
+                    end
                     require('lspconfig')[server_name].setup {}
                 end,
-                ['rust_analyzer'] = function()
-                    require('rust-tools').setup {}
-                end,
+                -- ['rust_analyzer'] = function()
+                --     require('rust-tools').setup {}
+                -- end,
                 ['lua_ls'] = function()
                     local lspconfig = require 'lspconfig'
                     lspconfig.lua_ls.setup {
@@ -106,6 +111,20 @@ return {
                             },
                         },
                     }
+                end,
+                ['clangd'] = function()
+                    local lspconfig = require 'lspconfig'
+                    lspconfig.clangd.setup {
+                        name = 'clangd',
+                        cmd = { 'clangd', '--background-index', '--clang-tidy', '--log=verbose' },
+                        initialization_options = {
+                            fallback_flags = { '-std=c++17' },
+                        },
+                    }
+                end,
+                ['templ'] = function()
+                    local lspconfig = require 'lspconfig'
+                    lspconfig.templ.setup {}
                 end,
             }
 

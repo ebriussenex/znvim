@@ -17,6 +17,8 @@ return {
             'python',
             'javascript',
             'typescript',
+            'templ',
+            'html',
         },
         auto_install = true,
         highlight = {
