@@ -24,7 +24,7 @@ vim.keymap.set('n', '<leader>t_', '<cmd>:ToggleTerm direction=vertical<CR>', { d
 vim.keymap.set('n', '<leader>tf', '<cmd>:ToggleTerm direction=float<CR>', { desc = 'Toggle term floating' })
 
 vim.keymap.set('n', '<leader>rr', function()
-    if vim.opt.number:get() == true then
+    if vim.opt.number == true then
         vim.opt.number = false
         vim.opt.relativenumber = true
     else

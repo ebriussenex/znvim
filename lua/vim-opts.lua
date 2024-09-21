@@ -1,8 +1,8 @@
 vim.opt.mouse = 'a'
 
--- TODO: make conditional relative number
 vim.opt.number = true
 -- vim.opt.relativenumber = true
+-- made toggle relativenumber check vim-keymaps.lua
 
 vim.opt.showmode = false
 vim.opt.clipboard = 'unnamedplus'
