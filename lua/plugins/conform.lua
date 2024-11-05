@@ -23,7 +23,9 @@ return {
         end,
         formatters_by_ft = {
             lua = { 'stylua' },
-            -- example: javascript = { { "prettierd", "prettier" } },
+            c = {
+                'clang-format',
+            },
         },
     },
 }
