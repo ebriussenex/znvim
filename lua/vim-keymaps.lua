@@ -24,12 +24,11 @@ vim.keymap.set('n', '<leader>t_', '<cmd>:ToggleTerm direction=vertical<CR>', { d
 vim.keymap.set('n', '<leader>tf', '<cmd>:ToggleTerm direction=float<CR>', { desc = 'Toggle term floating' })
 
 vim.keymap.set('n', '<leader>rr', function()
-    if vim.opt.number == true then
-        vim.opt.number = false
-        vim.opt.relativenumber = true
+    if vim.wo.relativenumber then
+        vim.wo.relativenumber = false
+        vim.wo.number = true
     else
-        vim.opt.number = true
-        vim.opt.relativenumber = false
+        vim.wo.relativenumber = true
+        vim.wo.number = true
     end
-    vim.cmd 'redraw'
 end, { desc = 'Toggle [R]elative Numbe[R]' })

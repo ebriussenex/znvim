@@ -1,7 +1,7 @@
 vim.opt.mouse = 'a'
 
-vim.opt.number = true
--- vim.opt.relativenumber = true
+vim.opt.number = false
+vim.opt.relativenumber = true
 -- made toggle relativenumber check vim-keymaps.lua
 
 vim.opt.showmode = false
